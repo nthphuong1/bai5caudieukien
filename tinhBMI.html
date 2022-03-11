@@ -12,20 +12,38 @@
     <input type="text" id="can nang">
     <input type="text" id="chieu cao">
     <button onclick="check()">Kết Quả</button>
-    <h1 id="kq"></h1>
+    <h1 id="kq"> </h1>
     <script>
         function check() {
-            let cannang = document.getElementById("can nang")
-            let chieucao = document.getElementById("chieu cao")
+            let cannang = +document.getElementById("can nang")
+            let chieucao = +document.getElementById("chieu cao")
             let bmi = cannang / (chieucao * chieucao)
-            let kq = ""
-            if (bmi < 16) {
-                kq = "Gầy độ III"
+            let kq = " "
+            if (bmi > 40) {
+                kq = "béo phì cấp độ III"
+            }
+            else if (35 <= bmi && bmi < 40) {
+                kq = "béo phì cấp độ II"
+            }
+            else if (30 <= bmi && bmi < 35) {
+                kq = "béo phì cấp độ I"
+            }
+            else if (25 <= bmi && bmi < 30) {
+                kq = "thừa cân"
+            }
+            else if (18.5 <= bmi && bmi < 25) {
+                kq = "bình thường"
+            }
+            else if (17 <= bmi && bmi < 18.5) {
+                kq = "gầy cấp độ I"
             }
             else if (16 <= bmi && bmi < 17) {
-                kq = "Gầy độ II"
+                kq = "gầy cấp độ II"
             }
-            document.getElementById("kq").innerHTML = kq
+            else if (bmi < 16) {
+                kq = "gầy cấp độ III"
+            }
+            document.getElementById("kq").innerHTML = kq;
         }
     </script>
 </body>
