@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Giá Hoa Quả</h1>
+    <select id="giá">
+        <option>Nope</option>
+        <option>Ổi</option>
+        <option>Dưa Hấu</option>
+        <option>Táo</option>
+        <option>Xoài</option>
+        <option>Cam</option>
+        <option>Chôm Chôm</option>
+        <option>Măng Cụt</option>
+    </select>
+    <button onclick="check()">Xem Giá</button>
+
+    <p id="giá tiền"></p>
+    <script>
+        function check() {
+            let a = document.getElementById("giá").value;
+            let kq = ""
+            if (a == "Ổi" || a == "Dưa Hấu") {
+                kq = "20000 đ/kg"
+            }
+            else if (a == "Măng Cụt") {
+                kq = "50000 đ/kg"
+            }
+            else if (a == "Táo" || a == "Xoài") {
+                kq = "30000 đ/kg"
+            }
+            else if (a == "Cam" || a == "Chôm Chôm") {
+                kq = "40000 đ/kg"
+            }
+            document.getElementById("giá tiền").innerHTML = "Giá tiền: " + kq;
+        }
+    </script>
+</body>
+
+</html>

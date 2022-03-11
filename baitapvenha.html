@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Nhập vào a, b, c, kiểm tra xem a, b, c có phải là 3 cạnh của:
+    1 tam giác?
+    1 tam giác cân?
+    1 tam giác đều?
+    1 tam giác vuông?
+    <input type="text" id="canh a">
+    <input type="text" id="canh b">
+    <input type="text" id="canh c">
+    <button onclick="check()">Tính</button>
+    <h1 id=" hai"></h1>
+    <script>
+        function check() {
+            let a = +document.getElementById("canh a").value;
+            let b = +document.getElementById("canh b").value;
+            let c = +document.getElementById("canh c").value;
+            let kq = ""
+            if (a > 0 && b > 0 && c > 0 && a + b > c && b + c > a && a + c > b)
+                kq = " Là tam giác";
+        }
+
+        document.getElementById("hai").innerHTML = kq
+        
+    </script>
+
+</body>
+
+</html>
