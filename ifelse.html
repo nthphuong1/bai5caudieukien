@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="ten" >
+    <button onclick="check()">check</button>
+    <h1 id="rs"> </h1>
+    
+    <script>
+        function check() {
+            let num = document.getElementById('ten').value;
+            if (num%2 ==0) {
+                document.getElementById('rs').innerHTML = "Chẵn"
+            } else {
+                document.getElementById('rs').innerHTML = "Lẻ"
+            }
+        }
+    </script>
+    </body>
+</html>
